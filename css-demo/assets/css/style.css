@@ -1,0 +1,50 @@
+/* ---------------Box Sizing----------------- */
+
+html {
+    box-sizing: border-box;
+  }
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+
+body{
+    background-color: #4C5958;
+    font-family: 'Nunito Sans', sans-serif;
+font-family: 'Roboto', sans-serif;
+}
+
+main{
+    background-color: #3D11D9;
+    width: 80vw;
+    max-width: 1140px;
+    margin: 40px auto;
+    border: 2px solid #4C5958;
+    border-radius: 5px;
+}
+
+header{
+    background-color: bisque;
+    padding: 20px;
+    background-image: url("../img/neon-light-abstract-background-image_111005.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+.hgroup h1 a{
+    color: #fff;
+    text-shadow: 1px 1px 000000;
+    font-size: 2.5rem;
+    text-decoration: none;
+}
+
+.hgroup h2 a{
+    color: #fff;
+    text-shadow: 1px 1px 000000;
+    font-size: 1.8rem;
+    text-decoration: none;
+
+}
