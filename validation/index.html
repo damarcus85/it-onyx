@@ -7,26 +7,33 @@
   <title>IT Onyx Bauer| DaMarcus West</title>
   <meta name="description" content="Keyword Rich Description" />
   <meta name="author" content="DaMarcus West" />
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/additional-methods.min.js"></script>
+  <style>
+     .error {
+          color: red;
+          padding-left: 5px;
+     }</style>
 </head>
 
 <body>
   <h2>New Patient Registration</h2>
 
   <h5>Please fill out the form below</h5>
-  <form action="https://brucebauer.info/assets/ITEC3650/datadump.php">
+  <form id="Submit Patient Form" action="https://brucebauer.info/assets/ITEC3650/datadump.php">
   <label for="Name" class="formlabel">First Name:</label>
-  <input type="text" id="firstname" name="first Name" size="30" maxlength="30"><br>
+  <input type="text" id="firstname" name="first Name" size="30" maxlength="30" data-rule-required="true"  data-msg-required="First Name is Required" ><br>
   <label for="Name" class="formlabel">Middle Initial:</label>
-  <input type="text" id="middleinitial" name="middle Initial" size="1" maxlength="1"><br>
+  <input type="text" id="middleinitial" name="middle Initial" size="1" maxlength="1" data-rule-required="true"  data-msg-required="Middle Initial is Required" ><br>
   <label for="Name" class="formlabel">Last Name:</label>
-  <input type="text" id="lastname" name="last Name" size="30" maxlength="30"><br>
+  <input type="text" id="lastname" name="last Name" size="30" maxlength="30" data-rule-required="true"  data-msg-required="Last Name is Required" ><br>
   <label for="Emai" class="formlabel">Email:</label>
-  <input type="text" id="email" name="email" size="30" maxlength="30"><br>
+  <input type="text" id="email" name="email" size="30" maxlength="30" data-rule-required="true"  data-msg-required="Email is Required" ><br>
   <label>Sex: </label>
-  <label for="Male"><input type="radio" name="sex" id="Male" value="M">Male</label>
-  <label for="Female"><input type="radio" name="sex" id="Female" value="F">Female</label>
-  <label for="NA"><input type="radio" name="sex" id="NA" value="NA">NA</label><br>
+  <label for="Male"><input type="radio" name="sex" id="Male" value="M" data-rule-required="true" data-msg-required="Sex is Required" />Male</label>
+  <label for="Female"><input type="radio" name="sex" id="Female" value="F"/>Female</label>
+  <label for="NA"><input type="radio" name="sex" id="NA" value="NA"/>NA</label><br>
   <label for="Birthday" class="formlabel">Birthday:</label>
   <input type="text" id="birthday" name="birthday" size="8" maxlength="8"><br>
   <label for="Height" class="formlabel">Height(inches):</label>
@@ -110,6 +117,11 @@
   <label for="Medications class="formlabel">If yes, list medications here:</label>
   <textarea name="medication list" rows="3" cols="30"></textarea><br>
   <input type="Submit" Value="Submit Patient Form">
+  <script>
+    $( "#SubmitExampleValidateForm" ).validate({
+    
+    });
+    </script>
 </form>
 
 
